@@ -1,0 +1,25 @@
+## Number of Occurencesin logN
+
+- Given n, k and an array of n integer
+- Split the input
+- //function to find lower bound
+- Keep `lo` = 1 ,`hi` = n-1
+- while lo<hi
+  - find mid  floor value of (lo+hi)/2
+  - if key <= mid element
+    - `hi` = `mid`
+  - else
+    - `lo` = `mid`+1
+  - if element at lo is the key
+    - return lo
+- //function for upper bound
+- while lo < hi
+  - mid is ceil of(lo+hi)/2
+  - if key >= element at mid
+    - lo = mid
+  - else
+    -  hi =mid-1
+  - if element at hi >= key
+    - return hi
+- number of occurrences = lower bound-upperbound+1
+- print number of occurences

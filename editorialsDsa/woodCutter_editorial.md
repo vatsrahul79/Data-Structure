@@ -1,0 +1,24 @@
+## Wood cutter
+
+- Given 
+- n - number of trees
+- m - required wood
+- arr - the height of n trees.
+- Keep lo = 0, hi = last element of the array
+- while lo <=hi
+  - find mid = (lo+hi)/2 //
+  - check is it possible to get required amount if sawblade is put at mid position
+    - keep varibale ans = mid
+    - and lo = mid+1
+  - else
+    - hi = mid-1
+  - return ans
+- //function to check is it possible to get required amount if sawblade is put at mid.
+- keep sum = 0
+- for all the tree heights
+  - if current height is > mid
+    - sum = sum + current height -mid
+  - if sum >= m
+    - return true
+  - else
+    - return false

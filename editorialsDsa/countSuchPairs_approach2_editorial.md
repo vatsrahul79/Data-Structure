@@ -1,0 +1,10 @@
+- Given n , target  and array A
+- Keep an object to find the frequency of all element
+- keep count = 0
+- for every element of A
+  - var req = target-A[i]
+  - if obj[req] exists
+    - count +=obj[req]
+  - if req = A[i] //this will take care of duplicates
+    - count--
+- print count/2(because we have counted for every element but we need number of pairs)
